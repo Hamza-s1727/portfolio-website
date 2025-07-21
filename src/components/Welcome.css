@@ -1,0 +1,73 @@
+
+#WelcomeBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.WelcomeMessage {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 90vh;
+    min-width: 300px;
+    width: 95vw;
+
+    border: 3px solid black;
+    border-radius: 20px;
+
+
+    background-image: url("../images/grid-paper.webp");
+    background-position: center;
+}
+
+.WelcomeSentence {
+    font-size: x-large;
+    font-weight: 800;
+    color: white;
+    margin: 2px;
+    font-family: monospace, Consolas, Menlo, Monaco, 'Courier New';
+}
+
+.TypedTextBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TypedText {
+    font-size: 55%;
+    font-weight: 800;
+    color: white;
+    margin: 2px;
+    font-family: monospace, Consolas, Menlo, Monaco, 'Courier New';
+
+    border-right: 5px solid;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(58) forwards,
+        cursor .4s, step-end infinite alternate;
+}
+
+@keyframes cursor {
+    0%, 50% {
+        border-color: white;
+    }
+    50.01%, 100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {width: 0;}
+}

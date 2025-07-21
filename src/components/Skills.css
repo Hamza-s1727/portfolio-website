@@ -1,0 +1,13 @@
+.Skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.SkillsHeader {
+    color: white;
+    font-family: monospace;
+
+    margin: 80px 40px;
+}
