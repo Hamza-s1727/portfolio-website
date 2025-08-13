@@ -1,9 +1,16 @@
 import "./Contact.css"
+import { motion } from "framer-motion"
 
 export default function Contact() {
     return (
         <form>
-        <div className="contactContainer">
+        <motion.div className="contactContainer"
+        
+        initial={{opacity: 0, y: 50}}
+        whileInView={{opacity: 1, y: 0, transition: {delay: 0.25, duration: 0.5}}}
+        viewport={{once: false, amount: .1}}
+        
+        >
             <h2 className="contactHeader"> Contact </h2>
 
             <label htmlFor="name" className="formLabel" >Name:</label><br/>
@@ -16,7 +23,7 @@ export default function Contact() {
             <input type="submit" value="Submit" className="submitButton"></input>
 
 
-        </div>
+        </motion.div>
         </form>
     )
 }
