@@ -1,21 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .SkillBox {
     display: flex;
     flex-direction: column;
     background-color: #090909;
-    width: 375px;
-    height: 375px;
+    width: 25vw;
+    height: 25vw;
+
     margin: 20px 20px;
 
     border-radius: 15px;
-    border: 2px solid transparent;
+    border: 1px solid white;
     align-items: center;
     justify-content: center;
 }
 
 .Logo {
-    width: 25%;
+    width: 15%;
 
     transition: transform 0.4s ease;
 }
@@ -25,8 +26,7 @@
 }
 
 .SkillBox > p {
-    font-family: monospace;
-    font-size: 30px;
+    font-family: 'Inter', monospace;
     color: white;
     margin-top: 20px;
 }
