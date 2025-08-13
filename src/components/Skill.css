@@ -3,13 +3,13 @@
 .SkillBox {
     display: flex;
     flex-direction: column;
-    background-color: #222;
-    width: 200px;
-    height: 200px;
+    background-color: #090909;
+    width: 375px;
+    height: 375px;
     margin: 20px 20px;
 
-    border-radius: 8px;
-    border: 2px solid #333;
+    border-radius: 15px;
+    border: 2px solid transparent;
     align-items: center;
     justify-content: center;
 }

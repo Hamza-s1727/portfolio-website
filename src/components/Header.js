@@ -17,9 +17,9 @@ export default function Header() {
 
 
     const navMenuStyle = {
-        display: "flex",
+        display: navbarOpen ? "flex" : "none",
         opacity: navbarOpen ? 1 : 0,
-        visibility: navbarOpen ? "visible" : "hidden",
+        //visibility: navbarOpen ? "visible" : "hidden",
         transition: "opacity 0.2s ease, visibility 0.4s ease",
         flexDirection: "column"
     }
