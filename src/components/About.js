@@ -2,6 +2,7 @@ import "./About.css"
 
 export default function About () {
     return (
+        <>
         <div className="About">
             <h2 className="aboutHeader">About</h2>
             <h2>Education</h2>
@@ -12,5 +13,9 @@ export default function About () {
                 <li>Expected Graduation: May 2028</li>
             </ul>
         </div>
+         <form>
+            <input type="submit" value="Download my CV" className="cvButton"></input>
+        </form>
+        </>
     )
 }

@@ -10,6 +10,9 @@ import react from "../images/react.png"
 import javaWhite from "../images/java-white.png"
 import java from "../images/java.png"
 
+import c from "../images/C.png"
+import cWhite from "../images/c-white.png"
+
 
 export default function Skills() {
     return(
@@ -33,6 +36,12 @@ export default function Skills() {
         hoverImg={java}
         normalImg={javaWhite}
         skillName="Java"/>
+
+        <Skill 
+        link="https://www.java.com/"
+        hoverImg={c}
+        normalImg={cWhite}
+        skillName="C"/>
 
 
       </div>
