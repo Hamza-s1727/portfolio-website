@@ -1,6 +1,6 @@
 import "./Header.css"
 import React from "react"
-export default function Header() {
+export default function Header(props) {
 
     const [navbarOpen, setNavBarOpen] = React.useState(false)
     React.useEffect(() => {
@@ -26,7 +26,6 @@ export default function Header() {
 
 
     function ToggleNavBar() {
-        console.log("its working")
         setNavBarOpen(prevState => !prevState)
     }
 
@@ -36,22 +35,22 @@ export default function Header() {
         <header>
             <h2>Hamza Sheikh</h2>
             <div className="header-buttons">
-                <button className="headerButton">Home</button>
-                <button className="headerButton">About</button>
-                <button className="headerButton">Skills</button>
-                <button className="headerButton">Projects</button>
-                <button className="headerButton">Contact</button>
+                <button className="headerButton" onClick={() => props.scrollToSection(props.refs.welcomeRef)} >Home</button>
+                <button className="headerButton"onClick={() => props.scrollToSection(props.refs.aboutRef)} >About</button>
+                <button className="headerButton" onClick={() => props.scrollToSection(props.refs.skillsRef)}>Skills</button>
+                <button className="headerButton" onClick={() => props.scrollToSection(props.refs.projectsRef)}>Projects</button>
+                <button className="headerButton" onClick={() => props.scrollToSection(props.refs.contactRef)}>Contact</button>
             </div>
             <div className="MobileNavBar">
                 <button className="NavBarButton" onClick={ToggleNavBar}></button>
             </div>
         </header>
         <div className="NavBarExpanded" style={navMenuStyle}>
-                    <button className="headerButton">Home</button>
-                    <button className="headerButton">About</button>
-                    <button className="headerButton">Skills</button>
-                    <button className="headerButton">Projects</button>
-                    <button className="headerButton">Contact</button>
+                    <button className="headerButton" onClick={() => props.scrollToSection(props.refs.welcomeRef)}>Home</button>
+                    <button className="headerButton" onClick={() => props.scrollToSection(props.refs.aboutRef)}>About</button>
+                    <button className="headerButton" onClick={() => props.scrollToSection(props.refs.skillsRef)}>Skills</button>
+                    <button className="headerButton" onClick={() => props.scrollToSection(props.refs.projectsRef)}>Projects</button>
+                    <button className="headerButton" onClick={() => props.scrollToSection(props.refs.contactRef)}>Contact</button>
         </div>
         </>
     )
