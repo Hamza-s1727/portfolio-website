@@ -60,3 +60,12 @@
     margin: 20px 20vw;
 
 }
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.captchaWrapper {
+    margin: 20px 20vw;
+}
