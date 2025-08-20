@@ -10,10 +10,19 @@ export default function Header(props) {
       }
     }
 
+
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    const navRef = React.useRef(null)
+
+    React.useEffect(() => {
+        if (navbarOpen && navRef.current) {
+            navRef.current.scrollIntoView({behavior: "smooth"})
+        }
+    }, [navbarOpen])
 
 
     const navMenuStyle = {
@@ -26,7 +35,7 @@ export default function Header(props) {
 
 
     function ToggleNavBar() {
-        setNavBarOpen(prevState => !prevState)
+        setNavBarOpen(prevState => (!prevState))
     }
 
     console.log("Navbar open: ", navbarOpen);
@@ -45,7 +54,7 @@ export default function Header(props) {
                 <button className="NavBarButton" onClick={ToggleNavBar}></button>
             </div>
         </header>
-        <div className="NavBarExpanded" style={navMenuStyle}>
+        <div className="NavBarExpanded" ref={navRef} style={navMenuStyle}>
                     <button className="headerButton" onClick={() => props.scrollToSection(props.refs.welcomeRef)}>Home</button>
                     <button className="headerButton" onClick={() => props.scrollToSection(props.refs.aboutRef)}>About</button>
                     <button className="headerButton" onClick={() => props.scrollToSection(props.refs.skillsRef)}>Skills</button>
