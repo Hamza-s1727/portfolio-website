@@ -7,7 +7,7 @@ header {
 
     display: flex;
     background-color: black;
-    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: monospace;
     margin: 0px;
     align-items: center;
     justify-content: space-between;
@@ -53,13 +53,12 @@ header > h2 {
     color: white;
     font-size: 1rem;
     font-family: monospace;
-    font-weight: 500;
+    font-weight: 1000;
 
 
     cursor: pointer;
     transition: border-bottom 0.1s ease, color 0.1s ease;
     width: auto;
-    height: 20%;
 }
 
 .headerButton:hover {

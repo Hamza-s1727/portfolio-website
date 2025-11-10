@@ -1,14 +1,46 @@
-import "./Welcome.css"
-import halftone from "../images/halftone-dots.webp"
-export default function Welcome() {
+import { useState, useEffect} from "react";
+import "./Welcome.css";
+
+
+export default function Welcome() { 
+    const sentences = ["Third Year CS & Math Student.", "Building Interactive Web Experiences in React.", "Passionate about Analysis, Algorithms and Systems Programming."]
+    const [index, setIndex] = useState(0);
+    const [deleting, setDeleting] = useState(false);
+    const [textIndex, setTextIndex] = useState(0);
+    const text = sentences[textIndex];
+
+
+    function modifyText() {
+        if (!deleting && index < text.length) {
+        setIndex(index + 1);
+        } else if (deleting && index > 0) {
+        setIndex(index - 1);
+        } else if (!deleting && index === text.length) {
+        setTimeout(() => setDeleting(true), 1000);
+        } else if (deleting && index === 0) {
+        setDeleting(false);
+        setTextIndex((textIndex + 1) % sentences.length);
+        }
+    }
+    useEffect(() => {
+    const speed = 35;
+    const id = setTimeout(modifyText, speed);
+
+    return () => clearTimeout(id);
+    }, [index, deleting, textIndex]);
+
     return (
-        <div id="WelcomeBox">
+    <div id="WelcomeBox">
         <div className="WelcomeMessage">
-            <p className="WelcomeSentence">Hi, I'm Hamza</p>
-            <div className="TypedTextBox">
-                <p className="TypedText">Third Year CS & Math Student At the University of Toronto.</p>
-            </div>
+        <p className="WelcomeSentence">Hi, I'm Hamza</p>
+
+        <div className="TypedTextBox">
+            <p className="TypedText">
+            {text.slice(0, index)}
+            <span className="TextCursor"></span>
+            </p>
         </div>
         </div>
-    )
+    </div>
+    );
 }

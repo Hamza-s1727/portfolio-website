@@ -5,3 +5,12 @@
     margin: 80px 40px;
     font-size: clamp(2rem, 5vw, 4rem);
 }
+
+.Projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 40px;
+}

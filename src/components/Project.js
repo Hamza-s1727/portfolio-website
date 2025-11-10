@@ -1,15 +1,19 @@
 import "./Project.css"
 
-export default function Project (props) {
+export default function Project ({img, name, description, hasGithub= false, hasDemo = false}) {
     return (
         <div className="ProjectContainer">
             <div className="ProjectBox">
                 <div className="ProjectImageContainer">
-                    <img className="ProjectImage" src={props.img}></img>
+                    <img className="ProjectImage" src={img}></img>
                 </div>
-                <h3 className="ProjectName">{props.name}</h3>
-                <p className="ProjectDescription">{props.description}</p>
-                <button className="Github"></button>
+                <h3 className="ProjectName">{name}</h3>
+                <p className="ProjectDescription">{description}</p>
+                <div className="ProjectBottom">
+                    {hasGithub && <a href={hasGithub} className="Github"></a>}
+                    {hasDemo && 
+                    <a className="Demo" href={hasDemo}>View Demo</a> }
+                </div>
             </div>
         </div>
     )

@@ -1,0 +1,57 @@
+.DrMarioContainer {
+    font-family: monospace;
+    color: white;
+
+    color: white;
+
+    font-family: monospace;
+    margin: 80px 40px;
+
+
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.DrMarioIntro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-family: monospace;
+    color: white;
+    white-space: pre;
+}
+
+.DrMarioHeader {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.DrMarioHome {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    background-color: black;
+    font-family: monospace;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    border: 3px solid transparent;
+    border-bottom: 3px solid #1a1a1a;
+    border-radius: 12px;
+}
+
+.Link {
+    text-decoration: none;
+}
+
+video {
+    max-height: 100vw;
+    width: 100%;
+    max-height: 60vh;
+    height: auto;
+}

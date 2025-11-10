@@ -12,6 +12,13 @@ export default function About () {
         >
         <div className="About">
             <h2 className="aboutHeader">About</h2>
+            <h2>Work Experience</h2>
+            <h3>Teaching Assistant, University of Toronto</h3>
+            <h4>September 2025-Present</h4>
+            <ul>
+                <li>TA for the course MAT132H5: Differential Calculus for Life Sciences</li>
+                <li>Duties include: Running tutorials, office hours, and Marking assignments and tests</li>
+            </ul>
             <h2>Education</h2>
             <ul>
                 <li> Bachelors of Science, University of Toronto</li>
@@ -20,9 +27,9 @@ export default function About () {
                 <li>Expected Graduation: May 2028</li>
             </ul>
         </div>
-         <form>
-            <input type="submit" value="Download my CV" className="cvButton"></input>
-        </form>
+         <a href="https://cv.hsheikh.com/hs-cv.pdf" download className="cvButton">
+         Download my CV
+         </a>
         </ motion.div>
     )
 }
