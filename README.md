@@ -1,3 +1,1 @@
-This is a website used to hold future projects and information. Currently under construction. Bootstrapped with Create React App.
-
-A website link will be provided upon the website completion.
+This is a website that holds information about myself, projects and other information. You can find it at www.hsheikh.com. Bootstrapped with Create React App and hosted on an Oracle Cloud VM using nginx
