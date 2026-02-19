@@ -1,6 +1,6 @@
 import "./Skill.css"
 import React from "react"
-import { motion } from 'framer-motion';
+
 
 export default function Skill(props) {
     const [isHover, setIsHover] = React.useState(false)
@@ -13,7 +13,7 @@ export default function Skill(props) {
             
             
             >
-            <img className="Logo" src={isHover ? props.hoverImg: props.normalImg}></img>
+            <img className="Logo" src={isHover ? props.hoverImg: props.normalImg} alt="skill_logo"></img>
             <p>{props.skillName}</p>
         </div>
         </a>

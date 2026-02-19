@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect, useCallback} from "react";
 import "./Welcome.css";
 
 
@@ -10,7 +10,7 @@ export default function Welcome() {
     const text = sentences[textIndex];
 
 
-    function modifyText() {
+    const modifyText = useCallback(() => {
         if (!deleting && index < text.length) {
         setIndex(index + 1);
         } else if (deleting && index > 0) {
@@ -21,7 +21,8 @@ export default function Welcome() {
         setDeleting(false);
         setTextIndex((textIndex + 1) % sentences.length);
         }
-    }
+    }, [deleting, index, textIndex])
+
     useEffect(() => {
     const speed = 35;
     const id = setTimeout(modifyText, speed);
