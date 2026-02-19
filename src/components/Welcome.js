@@ -21,14 +21,14 @@ export default function Welcome() {
         setDeleting(false);
         setTextIndex((textIndex + 1) % sentences.length);
         }
-    }, [deleting, index, textIndex])
+    }, [deleting, index, textIndex, text, sentences.length])
 
     useEffect(() => {
     const speed = 35;
     const id = setTimeout(modifyText, speed);
 
     return () => clearTimeout(id);
-    }, [index, deleting, textIndex]);
+    }, [modifyText]);
 
     return (
     <div id="WelcomeBox">
