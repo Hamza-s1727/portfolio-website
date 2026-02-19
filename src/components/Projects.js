@@ -2,6 +2,7 @@ import ScheduleImg from "../images/queue.jpg"
 import WebsiteImg from "../images/website.png"
 import DrMarioImg from "../images/drmario.png"
 import PainterImg from "../images/painter.png"
+import RecallImg from "../images/recaller.png"
 
 
 import Project from "./Project"
@@ -54,9 +55,17 @@ export default function Projects () {
             description="A recreation of a multi level memory manager, including virtual-to-physical address translation, 
             and recreation of 4 page replacement algorithms (FIFO, LRU, ClOCK and ARC). Private repo
             avaliable on request."
+            />
 
+            <Project
+            img={RecallImg}
+            name="Spaced Repetition Review System"
+            description="Implement spaced repetition easily with a simple review system. This program automates the process by
+            connecting your concepts to a postgreSQL server, and automatically displays them with increasing intervals"
+            hasGithub={"https://github.com/Hamza-s1727/spaced-recall"}
             />
             </div>
+
         </ motion.div>
     )
 
